@@ -1,12 +1,16 @@
 .idea/
 .project/
 .settings/
+pom.properties/
+.class/
 **/bin/
 **/target/
 **/.settings/
 **/.classpath
 **/.project
 **/.gitignore
+**/pom.properties
+**/.class
 **/.idea
 **/logs/
 **/*.iml
