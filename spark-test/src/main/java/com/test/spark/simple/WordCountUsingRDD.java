@@ -17,6 +17,6 @@ public class WordCountUsingRDD {
           JavaRDD<String> rdd = jsc.textFile("src/main/resources/data/sample-text.txt");
           JavaPairRDD<String, Integer> wordCounts = rdd.flatMap(x -> Arrays.asList(x.split(" ")).iterator())
                     .mapToPair(x -> new Tuple2<String, Integer>(x, 1)).reduceByKey((x, y) -> x + y);
-          wordCounts.foreach(x -> System.out.println(x._1 + "|" + x._2));
+          wordCounts.foreach(x -> System.out.println(x._1 + "=" + x._2));
      }
 }
