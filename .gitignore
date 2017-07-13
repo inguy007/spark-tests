@@ -1,0 +1,16 @@
+.idea/
+.project/
+.settings/
+**/bin/
+**/target/
+**/.settings/
+**/.classpath
+**/.project
+**/.gitignore
+**/.idea
+**/logs/
+**/*.iml
+**/*.swp
+**/dependency-reduced-pom.xml
+.idea/
+.vscode/
