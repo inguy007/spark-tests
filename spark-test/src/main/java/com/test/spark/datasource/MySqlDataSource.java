@@ -21,6 +21,7 @@ public class MySqlDataSource {
           Dataset<Row> df = spark.read().jdbc("jdbc:mysql://localhost:3306/bedrock44x", "system_config", props);
           //df = df.orderBy(df.col("last_name"));
           df.show(false);
+          df.printSchema();
      }
      
 }
