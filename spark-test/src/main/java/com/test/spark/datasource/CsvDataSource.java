@@ -25,8 +25,10 @@ public class CsvDataSource {
           optionMap = new HashMap<String, String>();
           optionMap.put("inferSchema", "true");
           optionMap.put("delimiter", ",");
+          //indicating that the first row does not suggest a header.
           optionMap.put("header", "false");
           dataSet = spark.read().options(optionMap).csv("src/main/resources/data/inputCsvWithoutHeader.txt");
+          //spark infers column names as _c0,_c1 etc. so we can rename those to something meaningful
           dataSet = dataSet.withColumnRenamed("_c0", "id").withColumnRenamed("_c1", "name").withColumnRenamed("_c2", "dob").toDF();
           dataSet.printSchema();
           dataSet.show();
