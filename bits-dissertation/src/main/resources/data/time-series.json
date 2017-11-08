@@ -1,0 +1,47 @@
+{
+	"fileName": "time-series2.csv",
+	"delimiter": ",",
+	"timeSeries": true,
+	"recordSchema": [{
+			"position": 0,
+			"identifier": true,
+			"name": "event_id",
+			"dataType": "STRING",
+			"categorical": false,
+			"state": false,
+			"feature": false,
+			"similarityTolerance": 0.0
+		},
+		{
+			"position": 1,
+			"identifier": false,
+			"name": "timestamp",
+			"dataType": "DATE",
+			"categorical": false,
+			"state": false,
+			"feature": true,
+			"similarityTolerance": 0.0
+		},
+		{
+			"position": 2,
+			"identifier": false,
+			"name": "memory_consumption",
+			"dataType": "STRING",
+			"categorical": false,
+			"state": true,
+			"feature": true,
+			"similarityTolerance": 0.0
+		},
+		{
+			"position": 3,
+			"identifier": false,
+			"name": "process_id",
+			"dataType": "STRING",
+			"categorical": true,
+			"state": false,
+			"feature": false,
+			"similarityTolerance": 0.0
+		}
+	],
+	"staticRules": null
+}
